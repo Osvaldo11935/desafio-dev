@@ -1,0 +1,49 @@
+[
+            {
+              "id": 1,
+              "descricao": "Débito",
+              "natureza": "Entrada",
+              "sinal": "+"
+            },
+          {
+              "id": 2,
+              "descricao": "Boleto",
+              "natureza": "Saída",
+              "sinal": "-"
+            },{
+              "id": 3,
+              "descricao": "Financiamento",
+              "natureza": "Saída",
+              "sinal": "-"
+            },{
+              "id": 4,
+              "descricao": "Crédito",
+              "natureza": "Entrada",
+              "sinal": "+"
+            },{
+              "id": 5,
+              "descricao": "Recebimento Empréstimo",
+              "natureza": "Entrada",
+              "sinal": "+"
+            },{
+              "id": 6,
+              "descricao": "Vendas",
+              "natureza": "Entrada",
+              "sinal": "+"
+            },{
+              "id": 7,
+              "descricao": "Recebimento TED",
+              "natureza": "Entrada",
+              "sinal": "+"
+            },{
+              "id": 8,
+              "descricao": "Recebimento DOC",
+              "natureza": "Entrada",
+              "sinal": "+"
+            },{
+              "id": 9,
+              "descricao": "Aluguel",
+              "natureza": "Saida",
+              "sinal": "-"
+            }
+]

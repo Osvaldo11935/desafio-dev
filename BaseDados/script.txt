@@ -1,0 +1,31 @@
+create database Desafio
+
+use Desafio
+create table Pessoas(
+id bigint primary key ,
+nome varchar(14),
+cpf varchar(11)
+)
+create table Transacoes(
+id bigint primary key ,
+descricao varchar(50),
+natureza varchar(50),
+sinal varchar(20)
+)
+create table Lojas(
+id bigint primary key ,
+nome varchar(19),
+proprietarioId bigint,
+foreign key (proprietarioId) references Pessoas(id)
+)
+create table Movimentos(
+id bigint primary key ,
+valor float,
+data datetime,
+hora varchar(10),
+cartao varchar(12),
+transacaoId bigint,
+lojaId bigint,
+foreign key (transacaoId) references Transacoes(id),
+foreign key (lojaId) references Lojas(id)
+)
