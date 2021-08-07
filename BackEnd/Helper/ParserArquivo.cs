@@ -11,10 +11,7 @@ namespace BackEnd.Helper
 {
             public class ParserArquivo : IParserArquivo
             {
-                        public List<string> extensaoArquivo = new List<string>()
-                        {
-                           {"text/plain"},
-                        };
+                        
                         public List<Movimentos> extrarDados(string strdata)
                         {
 
@@ -48,11 +45,16 @@ namespace BackEnd.Helper
                         }
                         public string fileConfig(List<IFormFile> arquivos)
                         {
+                                    var extensaoArquivo = new Dictionary<string,string>()
+                                    {
+                                       {"text/plain","txt"}
+                                    };
                                     string strBase64 = "";
                                     foreach (var arquivo in arquivos)
                                     {
-                                                var isvalid = extensaoArquivo.Where(r => r.ContainValue(arquivo.ContentType));
-                                                if (isvalid.Count()> 0)
+                                                var isvalid = extensaoArquivo.FirstOrDefault(e=>e.Key==arquivo.ContentType).Value;
+                                               
+                                                if (isvalid!=null)
                                                 {
 
                                                       using (var ms = new MemoryStream())
