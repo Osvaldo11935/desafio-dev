@@ -2,7 +2,7 @@
 
 const Upload = async () => {
     let formData = new FormData();
-    var files = document.querySelectorAll(".form input[type=file]");
+    var files = document.querySelectorAll("input[type=file]");
     for (let t = 0; t < files.length; t++) {
         var dataFile = files[t].files
         var file = dataFile[0]
