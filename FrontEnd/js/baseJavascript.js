@@ -11,7 +11,8 @@ const Upload = async () => {
     let xmlRequest = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
     xmlRequest.onreadystatechange = (e) => {
         if (xmlRequest.readyState == 4 && xmlRequest.status == 200) {
-            var res = JSON.parse(xmlRequest.responseText)
+            alert(xmlRequest.responseText)
+            
         }
     }
     xmlRequest.open("POST", "https://localhost:5001/gerarMovimento", true)
